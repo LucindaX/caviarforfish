@@ -1,4 +1,6 @@
 languageCode = "en-us"
 title = "My Blog"
 theme = "beautifulhugo"
-baseURL = "http://example.org/"
+baseURL = "http://lucindax.github.io/"
+newContentEditor = "vim"
+pygmentsStyle = "native"
