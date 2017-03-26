@@ -1,0 +1,4 @@
+languageCode = "en-us"
+title = "My Blog"
+theme = "beautifulhugo"
+baseURL = "http://example.org/"
