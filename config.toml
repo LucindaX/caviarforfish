@@ -4,9 +4,10 @@ theme = "beautifulhugo"
 baseURL = "http://lucindax.github.io/"
 newContentEditor = "vim"
 pygmentsStyle = "native"
-pygmentuseclasses = true
+pygmentsUseClasses = true
 PygmentsCodeFences = true
 canonifyURLs = true
+disqusShortname = "caviarforfish"
 
 
 [Params]
@@ -14,6 +15,8 @@ canonifyURLs = true
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   commit = false
+  dateFormat = "January 2, 2006"
+  rss = true
 
 [Author]
   name = "Ahmed Osman"
