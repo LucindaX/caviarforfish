@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caviar For Fish</title>
+    <link>http://lucindax.github.io/index.xml</link>
+    <description>Recent content on Caviar For Fish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>ahmedosmanazrk@gmail.com (Ahmed Osman)</managingEditor>
+    <webMaster>ahmedosmanazrk@gmail.com (Ahmed Osman)</webMaster>
+    <lastBuildDate>Tue, 28 Mar 2017 16:13:21 +0200</lastBuildDate>
+    <atom:link href="http://lucindax.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Time is running out</title>
+      <link>http://lucindax.github.io/post/time-is-running-out/</link>
+      <pubDate>Tue, 28 Mar 2017 16:13:21 +0200</pubDate>
+      <author>ahmedosmanazrk@gmail.com (Ahmed Osman)</author>
+      <guid>http://lucindax.github.io/post/time-is-running-out/</guid>
+      <description>&lt;p&gt;I was explaining to a friend yesterday the date problem with some UNIX based systems that would occur in the year 2038 ( 03:14:07 UTC on 19 January 2038  &amp;hellip;. to be exact ) , and I thought I&amp;rsquo;d write about it in my first blog .&lt;/p&gt;
+
+&lt;p&gt;The issue is pretty simple really and you can look it up online in-depth , but here is the run down for laymen engineers .&lt;/p&gt;
+
+&lt;p&gt;So most 32-bit Unix or Unix-like systems store and manipulate time as a signed 32-bit integer . 32 bits if you recall can represent ranges from &lt;code&gt;0 to 4,294,967,295&lt;/code&gt; , which represents &lt;code&gt;2^32 − 1&lt;/code&gt; as unsigned integers , and ranges from &lt;code&gt;−2,147,483,648 to 2,147,483,647&lt;/code&gt; , which represents &lt;code&gt;−(2^31) to 2^31 − 1&lt;/code&gt; as signed integers , where the left-most bit represents the + or - value of the number . We are interested in the signed 32-bit integer range .&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;time_t&lt;/code&gt; or that signed 32-bit integer is interpreted as the number of seconds since &lt;code&gt;00:00:00 UTC 1 January 1970&lt;/code&gt; which is the epoch or reference point in Unix systems . So a positive integer represents the number of seconds after that reference and a negative integer represents the number of seconds before that reference . So imagine that signed 32-bit integer as a counter incrementing the number of seconds from that reference to represent time , it will keep incrementing until we reach &lt;code&gt;01111111 11111111 11111111 11111111&lt;/code&gt; which is &lt;code&gt;03:14:07 UTC on 19 January 2038&lt;/code&gt; and then an overflow happens and the sign bit is turned &lt;code&gt;10000000 00000000 00000000 00000000&lt;/code&gt; which is &lt;code&gt;20:45:52 UTC on 13 December 1901&lt;/code&gt; which as we said works because the signed 32-bit time value is interpreted as negative (before) and positive (after) seconds from our reference &lt;code&gt;00:00:00 UTC 1 January 1970&lt;/code&gt; .&lt;/p&gt;
+
+&lt;div style=&#34;text-align:center;&#34;&gt;&lt;img alt=&#34;&#34; src=&#34;//upload.wikimedia.org/wikipedia/commons/e/e9/Year_2038_problem.gif&#34; width=&#34;400&#34; height=&#34;130&#34; class=&#34;thumbimage&#34; data-file-width=&#34;400&#34; data-file-height=&#34;130&#34;&gt;&lt;/div&gt;
+
+&lt;p&gt;And it&amp;rsquo;s really as simple as that . Most new systems are 64-bit but a lot of embedded systems online right now are 32-bit and even most use 8-bit or 16-bit microprocessors right now . And these systems some are build to last until or beyond 2038 . So it might be impractical or in some cases impossible to upgrade the software running these systems . So to correct that bug , that system would most likely require replacing .&lt;/p&gt;
+
+&lt;p&gt;An interesting nugget is that MySQL database&amp;rsquo;s built-in functions like UNIX_TIMESTAMP() will return 0 after 03:14:07 UTC on 19 January 2038 .&lt;/p&gt;
+
+&lt;p&gt;From most of what I read there is no universal solution to this problem , some patch their systems , some upgrade but it&amp;rsquo;s a major issue that might be a pain in the ass .&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;quot;For example, changing time_t to an unsigned 32-bit integer, which would extend the range to the year 2106, would adversely affect programs that store, retrieve, or manipulate dates prior to 1970, as such dates are represented by negative numbers. Increasing the size of the time_t type to 64-bit in an existing system would cause incompatible changes to the layout of structures and the binary interface of functions &amp;quot; (Wikipedia)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My friend at the end decided that he&amp;rsquo;ll wait for the patch or software upgrade when the time comes to let go &amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;Is anyone actually anticipating this problem in their hardware or production system and considering this , maybe you work for some company that does , or worked around it in some software implementation or simulation . Please let me know in the comments I&amp;rsquo;d like to know the scale of the problem that that bug forced you to deal with .&lt;/p&gt;
+
+&lt;p&gt;Until next time &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hire Me</title>
+      <link>http://lucindax.github.io/page/resume/</link>
+      <pubDate>Tue, 28 Mar 2017 02:57:51 +0200</pubDate>
+      <author>ahmedosmanazrk@gmail.com (Ahmed Osman)</author>
+      <guid>http://lucindax.github.io/page/resume/</guid>
+      <description>&lt;p&gt;&lt;h2 align=&#39;center&#39;&gt;&lt;a href=&#39;http://lucindax.github.io/documents/Resume.pdf&#39;&gt;Download This Resume in PDF&lt;/a&gt;&lt;/h2&gt;
+&lt;div style=&#34;display:inline-block;&#34;&gt;&lt;img width=330 src=&#34;http://lucindax.github.io/img/Resume/Resume-1.jpg&#34;&gt;&lt;/div&gt;
+&lt;div style=&#34;display:inline-block;&#34;&gt;&lt;img width=330 src=&#34;http://lucindax.github.io/img/Resume/Resume-2.jpg&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://lucindax.github.io/page/about/</link>
+      <pubDate>Tue, 28 Mar 2017 02:08:12 +0200</pubDate>
+      <author>ahmedosmanazrk@gmail.com (Ahmed Osman)</author>
+      <guid>http://lucindax.github.io/page/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a software engineer with a degree in computer and communications engineering .&lt;/p&gt;
+
+&lt;p&gt;Besides programming , I&amp;rsquo;ve worked as a production assistant and editor on several projects with media companies , a hobby that turned into a job .&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been working with several languages , mainly Ruby , JS and Python . I&amp;rsquo;m always dipping my toes and then jumping into the pool of new technologies , frameworks or ideas . Love to explore whatever&amp;rsquo;s new and learn more .&lt;/p&gt;
+
+&lt;p&gt;Also Proud and disappointed supporter of Arsenal FC &lt;a href&gt;#WengerOut&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Feel free to say hello and send me a message !&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

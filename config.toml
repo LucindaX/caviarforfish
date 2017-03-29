@@ -8,7 +8,7 @@ pygmentsUseClasses = true
 PygmentsCodeFences = true
 canonifyURLs = true
 disqusShortname = "caviarforfish"
-
+publishDir = "docs"
 
 [Params]
   subtitle = "return false"

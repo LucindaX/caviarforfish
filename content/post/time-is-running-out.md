@@ -8,10 +8,6 @@ subtitle = "Year 2038 problem"
 
 I was explaining to a friend yesterday the date problem with some UNIX based systems that would occur in the year 2038 ( 03:14:07 UTC on 19 January 2038  .... to be exact ) , and I thought I'd write about it in my first blog .
 
-My friend has a wireless router that he refuses to throw away . It's always causing problems , the signal is weak , the antenna falls off randomly and he's got two new routers with his ISP subscriptions over the past two years that he's keeping in the closet because he's convinced that this one is better ( which it should be but it's broke ) and also because he paid a lot of money for it years ago . So jokingly he told him he'll have to give it up before 2038 anyways ( he makes jokes like that because he's a nerd ) so I told him good luck weathering it out till then .
-
-Of course It took me a while to figure out that his joke was a reference to this , because who would do that . After another friendasked why 2038 , so I started explaining . Let me preface this discussion by saying that I did no research on the consequences of the date problem on UNIX based routers , I'll just try to explain the issue in general . And that's what I did .
-
 The issue is pretty simple really and you can look it up online in-depth , but here is the run down for laymen engineers .
 
 So most 32-bit Unix or Unix-like systems store and manipulate time as a signed 32-bit integer . 32 bits if you recall can represent ranges from ` 0 to 4,294,967,295 ` , which represents `2^32 − 1` as unsigned integers , and ranges from `  −2,147,483,648 to 2,147,483,647 ` , which represents `−(2^31) to 2^31 − 1` as signed integers , where the left-most bit represents the + or - value of the number . We are interested in the signed 32-bit integer range .
