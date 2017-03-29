@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Caviar For Fish</title>
-    <link>http://lucindax.github.io/index.xml</link>
+    <link>https://lucindax.github.io/caviarforfish/index.xml</link>
     <description>Recent content on Caviar For Fish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>ahmedosmanazrk@gmail.com (Ahmed Osman)</managingEditor>
     <webMaster>ahmedosmanazrk@gmail.com (Ahmed Osman)</webMaster>
     <lastBuildDate>Tue, 28 Mar 2017 16:13:21 +0200</lastBuildDate>
-    <atom:link href="http://lucindax.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lucindax.github.io/caviarforfish/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Time is running out</title>
-      <link>http://lucindax.github.io/post/time-is-running-out/</link>
+      <link>https://lucindax.github.io/caviarforfish/post/time-is-running-out/</link>
       <pubDate>Tue, 28 Mar 2017 16:13:21 +0200</pubDate>
       <author>ahmedosmanazrk@gmail.com (Ahmed Osman)</author>
-      <guid>http://lucindax.github.io/post/time-is-running-out/</guid>
+      <guid>https://lucindax.github.io/caviarforfish/post/time-is-running-out/</guid>
       <description>&lt;p&gt;I was explaining to a friend yesterday the date problem with some UNIX based systems that would occur in the year 2038 ( 03:14:07 UTC on 19 January 2038  &amp;hellip;. to be exact ) , and I thought I&amp;rsquo;d write about it in my first blog .&lt;/p&gt;
 
 &lt;p&gt;The issue is pretty simple really and you can look it up online in-depth , but here is the run down for laymen engineers .&lt;/p&gt;
@@ -47,22 +47,22 @@
     
     <item>
       <title>Hire Me</title>
-      <link>http://lucindax.github.io/page/resume/</link>
+      <link>https://lucindax.github.io/caviarforfish/page/resume/</link>
       <pubDate>Tue, 28 Mar 2017 02:57:51 +0200</pubDate>
       <author>ahmedosmanazrk@gmail.com (Ahmed Osman)</author>
-      <guid>http://lucindax.github.io/page/resume/</guid>
-      <description>&lt;p&gt;&lt;h2 align=&#39;center&#39;&gt;&lt;a href=&#39;http://lucindax.github.io/document/Resume.pdf&#39;&gt;Download This Resume in PDF&lt;/a&gt;&lt;/h2&gt;
-&lt;div style=&#34;display:inline-block;&#34;&gt;&lt;img width=330 src=&#34;http://lucindax.github.io/img/Resume/Resume-1.jpg&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;display:inline-block;&#34;&gt;&lt;img width=330 src=&#34;http://lucindax.github.io/img/Resume/Resume-2.jpg&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+      <guid>https://lucindax.github.io/caviarforfish/page/resume/</guid>
+      <description>&lt;p&gt;&lt;h2 align=&#39;center&#39;&gt;&lt;a href=&#39;https://lucindax.github.io/caviarforfish/document/Resume.pdf&#39;&gt;Download This Resume in PDF&lt;/a&gt;&lt;/h2&gt;
+&lt;div style=&#34;display:inline-block;&#34;&gt;&lt;img width=330 src=&#34;https://lucindax.github.io/caviarforfish/img/Resume/Resume-1.jpg&#34;&gt;&lt;/div&gt;
+&lt;div style=&#34;display:inline-block;&#34;&gt;&lt;img width=330 src=&#34;https://lucindax.github.io/caviarforfish/img/Resume/Resume-2.jpg&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>http://lucindax.github.io/page/about/</link>
+      <link>https://lucindax.github.io/caviarforfish/page/about/</link>
       <pubDate>Tue, 28 Mar 2017 02:08:12 +0200</pubDate>
       <author>ahmedosmanazrk@gmail.com (Ahmed Osman)</author>
-      <guid>http://lucindax.github.io/page/about/</guid>
+      <guid>https://lucindax.github.io/caviarforfish/page/about/</guid>
       <description>&lt;p&gt;I &amp;rsquo;m a software engineer with a degree in computer and communications engineering .&lt;/p&gt;
 
 &lt;p&gt;Besides programming , I&amp;rsquo;ve worked as a production assistant and editor on several projects with media companies , a hobby that turned into a job .&lt;/p&gt;
