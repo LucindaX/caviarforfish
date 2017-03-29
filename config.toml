@@ -17,6 +17,7 @@ publishDir = "docs"
   commit = false
   dateFormat = "January 2, 2006"
   rss = true
+  comments = true
 
 [Author]
   name = "Ahmed Osman"
