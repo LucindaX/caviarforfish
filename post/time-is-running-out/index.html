@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Time is running out</title>
+  
+  <meta name="author" content="Ahmed Osman"/>
+  <meta name="generator" content="Hugo 0.19" />
+  <link href='http://lucindax.github.io//img/favicon.ico' rel='icon' type='image/x-icon'/>
+
+  <link rel="alternate" href="http://lucindax.github.io/index.xml" type="application/rss+xml" title="Caviar For Fish">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://lucindax.github.io//css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://lucindax.github.io//css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://lucindax.github.io//css/highlight.min.css" />
+
+  
+  
+ 
+  
+    <meta property="og:title" content="Time is running out" />
+  
+
+  
+    <meta property="og:description" content="Year 2038 problem">
+  
+
+  <meta property="og:type" content="website" />
+
+  
+    <meta property="og:url" content="http://lucindax.github.io/post/time-is-running-out/" />
+    <link rel="canonical" href="http://lucindax.github.io/post/time-is-running-out/" />
+  
+
+  
+    <meta property="og:image" content="http://lucindax.github.io/img/avatar-icon.png" />
+  
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@la_legume" />
+  <meta name="twitter:creator" content="@la_legume" />
+
+  
+    <meta name="twitter:title" content="Time is running out" />
+  
+
+  
+    <meta name="twitter:description" content="Year 2038 problem">
+  
+
+  
+    <meta name="twitter:image" content="http://lucindax.github.io/img/avatar-icon.png" />
+   
+
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://lucindax.github.io/">Caviar For Fish</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="http://lucindax.github.io/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="http://lucindax.github.io/page/about">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Resume" href="http://lucindax.github.io/page/resume">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Caviar For Fish" href="http://lucindax.github.io/">
+            <img class="avatar-img" src="http://lucindax.github.io//img/avatar-icon.png" alt="Caviar For Fish" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Time is running out</h1>
+                
+                  
+                    <h2 class="post-subheading">Year 2038 problem</h2>
+                  
+                
+                
+                  <span class="post-meta">Posted on March 28, 2017</span>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    <div class="container" role="main">
+      
+        <div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I was explaining to a friend yesterday the date problem with some UNIX based systems that would occur in the year 2038 ( 03:14:07 UTC on 19 January 2038  &hellip;. to be exact ) , and I thought I&rsquo;d write about it in my first blog .</p>
+
+<p>The issue is pretty simple really and you can look it up online in-depth , but here is the run down for laymen engineers .</p>
+
+<p>So most 32-bit Unix or Unix-like systems store and manipulate time as a signed 32-bit integer . 32 bits if you recall can represent ranges from <code>0 to 4,294,967,295</code> , which represents <code>2^32 − 1</code> as unsigned integers , and ranges from <code>−2,147,483,648 to 2,147,483,647</code> , which represents <code>−(2^31) to 2^31 − 1</code> as signed integers , where the left-most bit represents the + or - value of the number . We are interested in the signed 32-bit integer range .</p>
+
+<p>The <code>time_t</code> or that signed 32-bit integer is interpreted as the number of seconds since <code>00:00:00 UTC 1 January 1970</code> which is the epoch or reference point in Unix systems . So a positive integer represents the number of seconds after that reference and a negative integer represents the number of seconds before that reference . So imagine that signed 32-bit integer as a counter incrementing the number of seconds from that reference to represent time , it will keep incrementing until we reach <code>01111111 11111111 11111111 11111111</code> which is <code>03:14:07 UTC on 19 January 2038</code> and then an overflow happens and the sign bit is turned <code>10000000 00000000 00000000 00000000</code> which is <code>20:45:52 UTC on 13 December 1901</code> which as we said works because the signed 32-bit time value is interpreted as negative (before) and positive (after) seconds from our reference <code>00:00:00 UTC 1 January 1970</code> .</p>
+
+<div style="text-align:center;"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/e/e9/Year_2038_problem.gif" width="400" height="130" class="thumbimage" data-file-width="400" data-file-height="130"></div>
+
+<p>And it&rsquo;s really as simple as that . Most new systems are 64-bit but a lot of embedded systems online right now are 32-bit and even most use 8-bit or 16-bit microprocessors right now . And these systems some are build to last until or beyond 2038 . So it might be impractical or in some cases impossible to upgrade the software running these systems . So to correct that bug , that system would most likely require replacing .</p>
+
+<p>An interesting nugget is that MySQL database&rsquo;s built-in functions like UNIX_TIMESTAMP() will return 0 after 03:14:07 UTC on 19 January 2038 .</p>
+
+<p>From most of what I read there is no universal solution to this problem , some patch their systems , some upgrade but it&rsquo;s a major issue that might be a pain in the ass .</p>
+
+<pre><code> &quot;For example, changing time_t to an unsigned 32-bit integer, which would extend the range to the year 2106, would adversely affect programs that store, retrieve, or manipulate dates prior to 1970, as such dates are represented by negative numbers. Increasing the size of the time_t type to 64-bit in an existing system would cause incompatible changes to the layout of structures and the binary interface of functions &quot; (Wikipedia)
+
+</code></pre>
+
+<p>My friend at the end decided that he&rsquo;ll wait for the patch or software upgrade when the time comes to let go &hellip;.</p>
+
+<p>Is anyone actually anticipating this problem in their hardware or production system and considering this , maybe you work for some company that does , or worked around it in some software implementation or simulation . Please let me know in the comments I&rsquo;d like to know the scale of the problem that that bug forced you to deal with .</p>
+
+<p>Until next time &hellip;</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'caviarforfish';
+    var disqus_identifier = 'http:\/\/lucindax.github.io\/post\/time-is-running-out\/';
+    var disqus_title = 'Time is running out';
+    var disqus_url = 'http:\/\/lucindax.github.io\/post\/time-is-running-out\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:ahmedosmanazrk@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/lucindax" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/la_legume" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://lucindax.github.io//index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Ahmed Osman
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://lucindax.github.io/">Caviar For Fish</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.19</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://lucindax.github.io//js/main.js"></script>
+<script src="http://lucindax.github.io//js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
