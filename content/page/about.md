@@ -5,7 +5,7 @@ tags = []
 subtitle = ""
 +++
 
-I'm a software engineer with a degree in computer and communications engineering .
+I 'm a software engineer with a degree in computer and communications engineering .
 
 Besides programming , I've worked as a production assistant and editor on several projects with media companies , a hobby that turned into a job .
 
