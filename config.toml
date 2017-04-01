@@ -33,8 +33,3 @@ disqusShortname = "caviarforfish"
   url = "/page/about"
   weight = 3
 
-[[menu.main]]
-  name = "Resume"
-  url = "/page/resume"
-  weight = 4
-
